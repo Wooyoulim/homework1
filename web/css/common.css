@@ -1,0 +1,106 @@
+#wrap {
+    width: 100%;
+    min-width: 1600px;
+}
+
+.inner {
+    width: 1180px;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#header,
+#visual,
+#container,
+#content,
+#footer {
+    width: 100%;
+}
+
+/* 헤더 */
+#header {
+    width: 1740px;
+    border: 1px solid #000;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+#header .inner {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 {
+}
+#header .util {
+    display: flex;
+    align-items: center;
+}
+#header .util .lang {
+    display: flex;
+}
+#header .util .lang li {
+    margin-right: 20px;
+}
+#header .util .lang li a {
+    color: #999;
+    font-size: 13px;
+    font-weight: 300;
+}
+#header .util .lang li.on a {
+    color: #000;
+}
+#header .util .all-menu {
+}
+#header .util .all-menu i {
+    font-size: 30px;
+}
+#header .nav {
+}
+#header .nav .gnb {
+    display: flex;
+}
+#header .nav .gnb li {
+}
+#header .nav .gnb li a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    display: block;
+    padding: 10px 60px;
+}
+
+/* 비주얼 */
+
+/* 푸터 */
+
+#footer {
+    background: #131313;
+}
+#footer .inner {
+    width: 1280px;
+    height: 170px;
+    padding: 40px;
+    position: relative;
+}
+#footer p {
+    font-size: 14px;
+    color: #fff;
+}
+
+#footer p:nth-of-type(4) {
+    margin-top: 20px;
+}
+#footer p.top {
+    position: absolute;
+    top: -70px;
+    right: 0;
+}
+#footer p.top a {
+}

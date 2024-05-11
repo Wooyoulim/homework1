@@ -1,0 +1,540 @@
+#visual {
+    height: 900px;
+    position: relative;
+}
+#visual .main-banner {
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+#visual .main-banner li {
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+#visual .main-banner li:nth-child(1) {
+    background-image: url(../images/main/main01_pc.jpg);
+    left: 0;
+}
+#visual .main-banner li:nth-child(2) {
+    background-image: url(../images/main/main02_pc.jpg);
+}
+#visual .main-banner li:nth-child(3) {
+    background-image: url(../images/main/main03_pc.jpg);
+}
+#visual .main-banner li:nth-child(4) {
+    background-image: url(../images/main/main04_pc.jpg);
+}
+
+#visual .main-banner li .txt {
+    color: #fff;
+}
+#visual .main-banner li .txt h2 {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+#visual .main-banner li .txt h2 + p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#visual .main-banner li .txt .more {
+}
+#visual .main-banner li .txt .more a {
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+}
+
+#visual .btn-wrap {
+}
+#visual .btn-wrap .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+#visual .btn-wrap .prev {
+    left: 150px;
+}
+#visual .btn-wrap .next {
+    right: 150px;
+}
+#visual .scroll {
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.main {
+}
+.main .con-box {
+    width: 100%;
+}
+.main .con-box .inner {
+    padding: 120px 0;
+}
+.main .con-box h2 {
+    font-size: 45px;
+    font-weight: 500;
+}
+.main .box1 h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.main .box1 h2 + p {
+    font-size: 17px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.main .box2 h2 {
+    margin-bottom: 25px;
+}
+.main .box2 h2 + p {
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .con-box .more {
+}
+
+.main .con-box .more a {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 배경색이 없는 경우라면, 글씨가 보이도록 하기 위해, ::after의 순서를
+z-index를 통해 뒤로 보내야 하지만,
+이는 배경색이 존재할 때는 사용할 수 없다. */
+/* 그러므로, 글씨를 ::after 위로 올려놓기 위해 z-index:양수 를 사용하도록 한다  */
+.main .con-box .more a span {
+    transition: 0.4s;
+    z-index: 5;
+    position: relative;
+}
+
+.main .con-box .more a i {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.main .con-box .more a::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 70px;
+    background: orange;
+    transition: 0.4s;
+    transform: skewX(15deg);
+    position: absolute;
+    left: -260px;
+    top: -10px;
+}
+.main .con-box .more:hover a::after {
+    left: -10px;
+}
+.main .con-box .more a span {
+}
+
+.main .box1 .more {
+    text-align: center;
+}
+
+.main .box1 .more a:hover {
+    border-color: orange;
+}
+.main .box1 .more a:hover span {
+    color: #fff;
+}
+.main .box1 .more a:hover::after {
+    background: orange;
+}
+
+.main .box2 .more a {
+    border-color: #fff;
+}
+.main .box2 .more a span {
+    color: #fff;
+}
+.main .box2 .more a::after {
+    background: #fff;
+}
+.main .box2 .more a:hover {
+    border-color: #000;
+}
+.main .box2 .more a:hover span {
+    color: #000;
+}
+.main .box2 .more a:hover::after {
+    background: #fff;
+}
+
+.main .con1 {
+}
+.main .con1 ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .box1 ul li {
+    width: 270px;
+    height: 510px;
+}
+.main .box1 ul li a {
+}
+
+.main .box1 ul li a:hover img {
+    transform: scale(1.2);
+}
+.main .box1 ul li a:hover span {
+    opacity: 0.5;
+}
+
+.main .box1 ul li a div {
+    width: 100%;
+    height: 370px;
+    /* 호버 했을 때, 이미지만 커지고, div크기는 그대로 두고 싶을 때 */
+    overflow: hidden;
+    position: relative;
+}
+.main .box1 ul li a div img {
+    width: 100%;
+    transition: 0.5s;
+}
+.main .box1 ul li a div span {
+    width: 270px;
+    height: 370px;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    /* span은 인라인 요소이므로, 배경색을 주려면 db처리가 필요함 */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.main .box1 ul li a h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.main .box1 ul li a h3 span {
+    display: block;
+}
+.main .box1 ul li a p {
+    font-size: 15px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.main .con1 .more {
+    margin-top: 70px;
+}
+
+.main .con2 {
+    position: relative;
+    height: 1000px;
+}
+.main .con2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 50%;
+    background: #e7e7e7;
+    top: 0;
+    z-index: -10;
+}
+.main .con2 ul {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.main .con2 ul li {
+    width: 580px;
+}
+
+.main .con2 ul li:hover img {
+    transform: scale(1.1);
+}
+
+.main .con2 ul li div {
+    width: 580px;
+    height: 550px;
+    overflow: hidden;
+}
+.main .con2 ul li div a {
+    width: 580px;
+    height: 550px;
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .con2 ul li p {
+    text-align: center;
+    margin: 30px 0;
+}
+.main .con2 ul li div a img {
+    position: absolute;
+    z-index: 10;
+    transition: 0.5s;
+}
+.main .con2 ul li div a h3 {
+    position: relative;
+    z-index: 15;
+    font-size: 28px;
+    color: #fff;
+    border-bottom: none;
+    line-height: 1.3;
+    text-align: center;
+}
+.main .con2 ul li div a h3 span {
+    display: block;
+    font-size: 43px;
+}
+.main .con2 ul li div a b {
+    position: relative;
+    z-index: 15;
+    display: block;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.main .con2 ul li div a b i {
+    font-size: 25px;
+    line-height: 70px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+.main .con3 {
+    position: relative;
+}
+
+.main .con3::after {
+    content: '';
+    display: block;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(30, 30, 201);
+    z-index: -10;
+}
+
+.main .con3 .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .con3 .left {
+    width: 480px;
+    color: #fff;
+}
+.main .con3 .left h2 {
+}
+
+.main .con3 .left h2::after {
+    content: '';
+    width: 120px;
+    height: 2px;
+    background: #fff;
+    display: inline-block;
+}
+.main .con3 .left h2 + p {
+    word-break: keep-all;
+}
+.main .con3 .left p.more {
+}
+.main .con3 ul {
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main .con3 ul li {
+    margin-bottom: 25px;
+}
+.main .con3 ul li a {
+}
+.main .con3 ul li a div {
+    width: 275px;
+    height: 175px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.main .con3 ul li a div img {
+    width: 100%;
+    height: 175px;
+    /* object-fit: contain; */
+    transition: 0.5s;
+}
+
+.main .con3 ul li a div:hover img {
+    transform: scale(1.1);
+}
+.main .con3 ul li a strong {
+}
+
+.main .con4 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-image: url(../images/content/main_foot_bg.jpg);
+}
+.main .con4 .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .con4 .left {
+    width: 480px;
+    color: #fff;
+}
+.main .con4 .left h2 span {
+    display: block;
+    font-weight: 300;
+}
+.main .con4 ul {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .con4 ul li a {
+    display: block;
+    width: 220px;
+    height: 220px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .con4 ul li:nth-child(1) a {
+    background: rgba(244, 104, 17, 0.7);
+}
+
+.main .con4 ul li:nth-child(2) a {
+    background: rgba(12, 21, 47, 0.7);
+}
+
+.main .con4 ul li:nth-child(3) a {
+    background: rgba(7, 37, 93, 0.7);
+}
+.main .con4 ul li a > span {
+    display: block;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.main .con4 ul li a strong {
+    text-align: center;
+}
+
+.main .con4 ul li a strong span {
+    display: block;
+}
+
+#gnb {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+}
+
+#gnb::after {
+    content: '';
+    width: 2px;
+    height: 180px;
+    display: block;
+    background: #999;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#gnb li {
+    margin-bottom: 20px;
+}
+
+#gnb li:last-child {
+    margin-bottom: 0;
+}
+
+#gnb li a {
+    display: block;
+    padding-left: 20px;
+    white-space: nowrap;
+    position: relative;
+}
+
+#gnb li a::before,
+#gnb li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: none;
+}
+
+#gnb li a::before {
+    width: 9px;
+    height: 9px;
+    background: #999;
+    left: -3px;
+}
+
+#gnb li a::after {
+    width: 23px;
+    height: 23px;
+    border: 1px solid #000;
+    left: -10px;
+}
+
+#gnb li.on a::before,
+#gnb li.on a::after {
+    display: block;
+}
