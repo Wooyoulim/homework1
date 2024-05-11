@@ -1,4 +1,4 @@
-# React + Vite
+# 경동사이트 리액트로 바꿔보기
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
