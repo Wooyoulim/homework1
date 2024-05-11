@@ -10,7 +10,7 @@ const Header = () => {
                     <h1>
                         <a href="index.jsx">
                             <img
-                                src="<http://www.kyungdong.co.kr/ko/front/image/common/logo_pc.png>"
+                                src="http://www.kyungdong.co.kr/ko/front/image/common/logo_pc.png"
                                 alt="경동 로고"
                             />
                         </a>
