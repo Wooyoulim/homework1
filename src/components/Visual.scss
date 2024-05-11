@@ -1,4 +1,3 @@
-
 #visual {
     height: 900px;
     position: relative;
@@ -20,15 +19,19 @@
             &:nth-child(1) {
                 background-image: url(http://www.kyungdong.co.kr/ko/front/image/main/main01_pc.jpg);
                 left: 0;
+                z-index: 10;
             }
             &:nth-child(2) {
                 background-image: url(http://www.kyungdong.co.kr/ko/front/image/main/main02_pc.jpg);
+                left: 0;
             }
             &:nth-child(3) {
                 background-image: url(http://www.kyungdong.co.kr/ko/front/image/main/main03_pc.jpg);
+                left: 0;
             }
             &:nth-child(4) {
                 background-image: url(http://www.kyungdong.co.kr/ko/front/image/main/main04_pc.jpg);
+                left: 0;
             }
             .txt {
                 color: #fff;

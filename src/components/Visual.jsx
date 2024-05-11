@@ -1,5 +1,5 @@
 import VisualBanner from './VisualBanner';
-import visual from './../assets/api/data';
+import {visual} from './../assets/api/data';
 import './Visual.scss';
 
 const Visual = () => {
